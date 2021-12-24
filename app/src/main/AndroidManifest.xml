@@ -9,23 +9,11 @@
         android:roundIcon="@drawable/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/Theme.POCTWA">
-        <activity
-            android:name=".EditorActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
 
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
+        <meta-data
+            android:name="web_manifest_url"
+            android:value="@string/webManifestUrl" />
 
-                <data
-                    android:host="editor"
-                    android:scheme="edit" />
-                <data
-                    android:host="screencast-o-matic.com"
-                    android:scheme="https" />
-            </intent-filter>
-        </activity>
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -35,33 +23,69 @@
             </intent-filter>
         </activity>
 
-        <meta-data
-            android:name="web_manifest_url"
-            android:value="@string/webManifestUrl" />
-
         <activity
-            android:name="com.google.androidbrowserhelper.trusted.LauncherActivity"
-            android:exported="true"
-            android:label="@string/app_name">
-            <meta-data
-                android:name="android.support.customtabs.trusted.DEFAULT_URL"
-                android:value="@string/launchUrl" />
+            android:name=".EditorActivity"
+            android:exported="true">
 
-            <!--            <intent-filter>
-                            <action android:name="android.intent.action.MAIN" />
-                            <category android:name="android.intent.category.LAUNCHER" />
-                        </intent-filter>-->
-
-            <intent-filter android:autoVerify="true">
+            <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <data
-                    android:host="@string/hostName"
-                    android:scheme="https" />
+                    android:host="radiant-everglades-98534.herokuapp.com"
+                    android:pathPrefix="/"
+                    android:scheme="http" />
             </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="editor"
+                    android:scheme="edit" />
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="recorder"
+                    android:scheme="android-app" />
+            </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name=".CustomQueryStringLauncherActivity"
+            android:exported="true"
+            android:label="@string/app_name">
+            <!--                    <meta-data-->
+            <!--                        android:name="android.support.customtabs.trusted.DEFAULT_URL"-->
+            <!--                        android:value="@string/launchUrl" />-->
+
+            <!--        &lt;!&ndash;            <intent-filter>&ndash;&gt;-->
+            <!--        &lt;!&ndash;                <action android:name="android.intent.action.MAIN" />&ndash;&gt;-->
+            <!--        &lt;!&ndash;                <category android:name="android.intent.category.LAUNCHER" />&ndash;&gt;-->
+            <!--        &lt;!&ndash;            </intent-filter>&ndash;&gt;-->
+
+            <!--                    <intent-filter android:autoVerify="true">-->
+            <!--                        <action android:name="android.intent.action.VIEW" />-->
+
+            <!--                        <category android:name="android.intent.category.DEFAULT" />-->
+            <!--                        <category android:name="android.intent.category.BROWSABLE" />-->
+
+            <!--                        <data-->
+            <!--                            android:host="@string/hostName"-->
+            <!--                            android:scheme="https" />-->
+            <!--                    </intent-filter>-->
         </activity>
     </application>
 

@@ -16,6 +16,15 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    signingConfigs {
+        debug {
+            storeFile file('C:\\DATA\\Keystore\\Keystore')
+            storePassword 'acbde12345'
+            keyAlias 'tailv'
+            keyPassword 'acbde12345'
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false
