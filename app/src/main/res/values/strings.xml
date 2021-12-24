@@ -3,4 +3,5 @@
     <string name="launchUrl">https://radiant-everglades-98534.herokuapp.com</string>
     <string name="hostName">radiant-everglades-98534.herokuapp.com</string>
     <string name="webManifestUrl">https://radiant-everglades-98534.herokuapp.com/manifest.json</string>
+    <string name="launch_pwa">Launch PWA</string>
 </resources>
