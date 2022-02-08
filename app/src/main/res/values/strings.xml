@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">POC TWA</string>
+    <string name="app_name">POC TWA app_name</string>
     <string name="launchUrl">https://radiant-everglades-98534.herokuapp.com</string>
     <string name="hostName">radiant-everglades-98534.herokuapp.com</string>
     <string name="webManifestUrl">https://radiant-everglades-98534.herokuapp.com/manifest.json</string>
